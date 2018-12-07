@@ -5,6 +5,8 @@
  */
 package com.fieb.senai.entidades;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -17,8 +19,9 @@ public class Pessoa {
     private Integer idade;
 
     private Endereco endereco;
-    private Telefone telefone;
-    
+    //private Telefone telefone;
+    private List<Telefone> telefone = new ArrayList<>();
+            
     
     public Pessoa(String nome, Integer matricula, Integer idade) {
         this.nome = nome;
@@ -58,9 +61,14 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public Pessoa(Telefone numero) {
-        this.telefone = numero;
+    public List<Telefone> getTelefone() {
+        return telefone;
     }
+
+    public void setTelefone(List<Telefone> telefone) {
+        this.telefone.addAll(telefone);
+    }
+            
 
     
     
@@ -96,19 +104,4 @@ public class Pessoa {
         }
         return true;
     }
-
-    public Telefone getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(Telefone telefone) {
-        this.telefone = telefone;
-    }
-
-    
-
-   
-    }
-
-        
-
+}
