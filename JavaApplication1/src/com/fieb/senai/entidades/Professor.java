@@ -3,19 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package javaapplication1;
+package com.fieb.senai.entidades;
 
 /**
  *
  * @author Aluno
  */
-public class JavaApplication1 {
+public class Professor extends Pessoa {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public Professor(String nome, Integer matricula, Integer idade) {
+        super(nome, matricula, idade);
     }
+
     
+   
 }
